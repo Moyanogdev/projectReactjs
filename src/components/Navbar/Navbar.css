@@ -1,0 +1,19 @@
+.nav-item{
+    justify-content: center;
+    margin-inline: 10px;
+    background-color: #D90102;
+    color: black;
+    padding: 7px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.logoNav{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0%;
+    left: 10%;
+}
