@@ -8,6 +8,11 @@
     font-size: 20px;
     cursor: pointer;
     border-radius: 25px;
+    transition: .4s ease-in-out;
+}
+
+.nav-item:hover{
+    color: white;
 }
 
 .logoNav{

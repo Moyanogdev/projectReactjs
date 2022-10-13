@@ -1,0 +1,23 @@
+button{
+    background-color: #D90102;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+}
+
+button:hover{
+    color: white;
+}
+
+.card{
+    border-color: black;
+    border-radius: 25px;
+    border-width: 3px;
+    transition: .4s ease-in-out;
+}
+
+.card:hover{
+    border-color: #D90102;
+}
