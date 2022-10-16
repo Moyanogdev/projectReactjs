@@ -4,7 +4,7 @@ const products = [
         name: 'Intel i7',
         price: 90000,
         category: 'Hardware',
-        img: '/Images/inteli712.webp',
+        img: '/images/inteli712.webp',
         stock: 10,
         description: 'Microprocesador Intel i7 12va Generación'
     },
@@ -13,7 +13,7 @@ const products = [
         name: 'Intel i9',
         price: 150000,
         category: 'Hardware',
-        img: '/Images/inteli912.webp',
+        img: '/images/inteli912.webp',
         stock: 10,
         description: 'Microprocesador Intel i9 12va Generación'
     },
@@ -22,7 +22,7 @@ const products = [
         name: 'Gigabyte 2060',
         price: 130000,
         category: 'Hardware',
-        img: '/Images/placadevideoGigabyte2060.webp',
+        img: '/images/placadevideoGigabyte2060.webp',
         stock: 10,
         description: 'Placa de video Gigabyte 2060'
     },
@@ -31,7 +31,7 @@ const products = [
         name: 'RTX 3090',
         price: 450000,
         category: 'Hardware',
-        img: '/Images/placavideoGtx3090.webp',
+        img: '/images/placavideoGtx3090.webp',
         stock: 10,
         description: 'Placa de video RTX 3090'
     },
@@ -40,7 +40,7 @@ const products = [
         name: 'Samsung 24" FHD',
         price: 59000,
         category: 'Monitores',
-        img: '/Images/samsung24.webp',
+        img: '/images/samsung24.webp',
         stock: 10,
         description: 'Monitor Samsung 24" Full HD'
     },
@@ -49,7 +49,7 @@ const products = [
         name: 'Samsung 27" FHD',
         price: 80000,
         category: 'Monitores',
-        img: '/Images/samsung27.webp',
+        img: '/images/samsung27.webp',
         stock: 10,
         description: 'Monitor Samsung 27" Full HD'
     },
@@ -58,7 +58,7 @@ const products = [
         name: 'Benq 28" UHD',
         price: 95000,
         category: 'Monitores',
-        img: '/Images/benq28.webp',
+        img: '/images/benq28.webp',
         stock: 10,
         description: 'Monitor Benq 28" Ultra HD'
     },
@@ -67,7 +67,7 @@ const products = [
         name: 'Asus 32" UHD',
         price: 120000,
         category: 'Monitores',
-        img: '/Images/asus32.webp',
+        img: '/images/asus32.webp',
         stock: 10,
         description: 'Monitor Asus 32" UHD Gamer'
     },
@@ -76,7 +76,7 @@ const products = [
         name: 'Mouse Razer V2',
         price: 5500,
         category: 'Periféricos',
-        img:'/Images/mouseRazerGamer.webp',
+        img:'/images/mouseRazerGamer.webp',
         stock: 10,
         description: 'Mouse Razer Gamer V2'
     },
@@ -85,7 +85,7 @@ const products = [
         name: 'HyperX Gamer',
         price: 8500,
         category: 'Periféricos',
-        img: '/Images/tecladoHyperXGamer.webp',
+        img: '/images/tecladoHyperXGamer.webp',
         stock: 10,
         description: 'Teclado HyperX Gamer'
     },
@@ -94,7 +94,7 @@ const products = [
         name: 'Redragon Gamer 1',
         price: 15000,
         category: 'Periféricos',
-        img: '/Images/auricularesRedragonGamer.webp',
+        img: '/images/auricularesRedragonGamer.webp',
         stock: 10,
         description: 'Auriculares Redragon v1'
     },
@@ -103,7 +103,7 @@ const products = [
         name: 'Redragon Gamer 2',
         price: 19000,
         category: 'Periféricos',
-        img: '/Images/AuricularesRedragonGamer2.webp',
+        img: '/images/AuricularesRedragonGamer2.webp',
         stock: 10,
         description: 'Auriculares Redragon v2'
     },
@@ -112,7 +112,7 @@ const products = [
         name: 'Notebook Hp',
         price: 95000,
         category: 'Notebooks',
-        img: '/Images/notebookHp.webp',
+        img: '/images/notebookHp.webp',
         stock: 10,
         description: 'Notebook HP FHD'
     },
@@ -121,7 +121,7 @@ const products = [
         name: 'Notebook Dell Inspiron',
         price: 150000,
         category: 'Notebooks',
-        img: '/Images/notebookDellInspiron.webp',
+        img: '/images/notebookDellInspiron.webp',
         stock: 10,
         description: 'Notebook Dell Inspiron FHD'
     },
@@ -130,7 +130,7 @@ const products = [
         name: 'Notebook Asus Gamer',
         price: 210000,
         category: 'Notebooks',
-        img: '/Images/notebookAsusGamer.webp',
+        img: '/images/notebookAsusGamer.webp',
         stock: 10,
         description: 'Notebook Asus Gamer Pro'
     },
@@ -139,7 +139,7 @@ const products = [
         name: 'Notebook Msi Gamer',
         price: 310000,
         category: 'Notebooks',
-        img: '/Images/notebookMsiGamer.webp',
+        img: '/images/notebookMsiGamer.webp',
         stock: 10,
         description: 'Notebook Msi Gamer Pro'
     },
