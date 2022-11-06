@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react" 
 import './ItemDetailContainer.css'
-import { getProductById } from "../asyncMock"
+// import { getProductById } from "../asyncMock"
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { Ring } from '@uiball/loaders'
+import { getDoc, doc } from 'firebase/firestore'
 
 
 const ItemDetailContainer = () => {
@@ -12,12 +13,23 @@ const ItemDetailContainer = () => {
     const { productId } = useParams()
 
     useEffect(() => {
-        setCargando(true)
-        getProductById(productId).then(response => {
-            setProduct(response)
+
+        const docRef = doc(db, 'products', productId)
+
+        getDoc(docRef).then(response => {
+            console.log(response)
+            const data = response.data()
+            const productsAdapted = { id: response.id, ...data}
+            setProduct(productsAdapted)
         }).finally(() => {
             setCargando(false)
         })
+        // setCargando(true)
+        // getProductById(productId).then(response => {
+        //     setProduct(response)
+        // }).finally(() => {
+        //     setCargando(false)
+        // })
     }, [productId])
 
     if (cargando) {
