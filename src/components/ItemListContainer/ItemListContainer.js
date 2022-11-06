@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react" 
 import { useParams } from 'react-router-dom'
-import { DotSpinner } from '@uiball/loaders'
+import { Ring } from '@uiball/loaders'
 import { getProducts, getProductsByCategory } from "../asyncMock"
 import ItemList from "../ItemList/ItemList"
 import './ItemListContainer.css'
@@ -29,7 +29,7 @@ const ItemListContainer = () => {
         return (
             <div className='center'>
                 <h1 className="mt-5">Loading...</h1>
-                <DotSpinner size={40} speed={0.9} color="black" className="center" />
+                <Ring size={50} speed={2} color="black" className="center" />
             </div>
         )
     }

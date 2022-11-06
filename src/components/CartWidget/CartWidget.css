@@ -20,3 +20,8 @@
 .cartStyle:hover{
     background-color: #D90102;
 }
+
+.cartMagin{
+    margin-right: 10px;
+    margin-left: 10px;
+}

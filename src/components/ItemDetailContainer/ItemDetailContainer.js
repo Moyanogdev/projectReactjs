@@ -3,7 +3,7 @@ import './ItemDetailContainer.css'
 import { getProductById } from "../asyncMock"
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-import { DotSpinner } from '@uiball/loaders'
+import { Ring } from '@uiball/loaders'
 
 
 const ItemDetailContainer = () => {
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
         return ( 
         <div className= "center">
         <h3 className= "center mt-5">Cargando el detalle del producto</h3>
-        <DotSpinner  size={40} speed={0.9} color="black" className= "center"/>
+        <Ring  size={50} speed={2} color="black" className= "center"/>
         </div>
         )
     }

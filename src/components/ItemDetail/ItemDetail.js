@@ -1,8 +1,30 @@
-import Counter from '../Counter/Counter'
 import './ItemDetail.css'
+import { CartContext } from '../../CartContext/CartContext'
+import { useContext } from 'react'
+import ItemCount from '../ItemCount/ItemCount'
+import '../asyncMock'
 
 
 const ItemDetail = ({ img, name, category, price, stock, description }) => {
+    
+    const { addItem } = useContext(CartContext);
+
+    const onAdd = (count) => {
+        const productToAdd = {
+            name,
+            category,
+            price,
+            description,
+            count,
+            stock
+        }
+        
+        addItem(productToAdd);
+    }
+    
+    
+    
+    
     return (
         <div className="center row row-cols-1 row-cols-md-4 g-1">
             <div className="col">
@@ -14,7 +36,8 @@ const ItemDetail = ({ img, name, category, price, stock, description }) => {
                         <p className="card-text">Descripción: {description}</p>
                         <p className="card-text">Precio: ${price}</p>
                         <p className="card-text">Stock: {stock}</p>
-                        <Counter />
+
+                        < ItemCount onAdd={onAdd} stock={stock} />
                     </div>
                 </div>
             </div>
