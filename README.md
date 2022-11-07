@@ -22,6 +22,10 @@ Se utilizaron las siguientes Tecnologías:
 3) Instalar NPM usando el comando **`npm i`** en la ruta donde se encuentra "package.json" desde la terminal.
 4) Inicializar la APP con el comando **`npm start`**.
 
+## Gif de funcionamiento de la APP
+
+- https://loom.com/share/e5b486ae36b44fd0ae134c879f23c624
+
 ## Dependencias (package.json)
 
 - "@testing-library/jest-dom": "^5.16.5",
