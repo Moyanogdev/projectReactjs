@@ -1,36 +1,18 @@
-import { useEffect, useState } from "react" 
 import './ItemDetailContainer.css'
-// import { getProductById } from "../asyncMock"
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { Ring } from '@uiball/loaders'
-import { getDoc, doc } from 'firebase/firestore'
+import useAsync from '../Hooks/useAsync.js'
+import { getProductById } from '../../services/firebase/firestore/products'
 
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({}) 
-    const [cargando, setCargando] = useState(true)
+    
     const { productId } = useParams()
+    const productsAdapterFirestore = () => getProductById(productId)
 
-    useEffect(() => {
-
-        const docRef = doc(db, 'products', productId)
-
-        getDoc(docRef).then(response => {
-            console.log(response)
-            const data = response.data()
-            const productsAdapted = { id: response.id, ...data}
-            setProduct(productsAdapted)
-        }).finally(() => {
-            setCargando(false)
-        })
-        // setCargando(true)
-        // getProductById(productId).then(response => {
-        //     setProduct(response)
-        // }).finally(() => {
-        //     setCargando(false)
-        // })
-    }, [productId])
+    const {data:products, error, cargando} = useAsync(productsAdapterFirestore, [productId])
+    const navigate = useNavigate()
 
     if (cargando) {
         return ( 
@@ -41,10 +23,21 @@ const ItemDetailContainer = () => {
         )
     }
 
+    if (error) {
+        return (
+            <div className='center'>
+                <h1> Lo sentimos, ha ocurrido un error</h1>
+            </div>
+        )
+    }
+
     return (
         <div>
             <h1 className= "center">Detalle de producto</h1>
-            <ItemDetail key={product.id} {...product} />
+            <ItemDetail key={products.id} {...products} />
+            <div>
+            <button className="center" onClick={() => navigate(-1)}>Volver</button>
+            </div>
         </div>
     )
 }

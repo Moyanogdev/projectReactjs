@@ -1,5 +1,4 @@
-import { useState, useContext } from "react"
-import { Link } from 'react-router-dom';
+import { useState } from "react"
 
 const ItemCount = ({ stock = 10, initial = 1, onAdd }) => {
 

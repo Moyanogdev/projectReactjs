@@ -1,50 +1,17 @@
-import { useEffect, useState } from "react" 
 import { useParams } from 'react-router-dom'
 import { Ring } from '@uiball/loaders'
-// import { getProducts, getProductsByCategory } from "../asyncMock"
 import ItemList from "../ItemList/ItemList"
 import './ItemListContainer.css'
-import { getDocs, collection, query, where } from 'firebase/firestore'
-import { db } from '../../services/firebase'
+import { getProducts } from '../../services/firebase/firestore/products'
+import useAsync from '../Hooks/useAsync.js'
 
 
 const ItemListContainer = () => {
-    const [products, setProducts] = useState([])
-    const [cargando, setCargando] = useState(true)
+
     const { categoryId } = useParams()
+    const getProductsWithCategory = () => getProducts(categoryId)
 
-    useEffect(() => {
-        setCargando(true)
-
-        const collectionRef = categoryId
-            ? query(collection(db, 'products'), where('category', '==', categoryId)) 
-            : collection(db, 'products')
-
-        getDocs(collectionRef).then(response => {
-            setProducts(response)
-            const productsAdapted = response.docs.map(doc => {
-                const data = doc.data()
-
-                return { id: doc.id, ...data }
-            })
-            setProducts(productsAdapted)
-
-        }).catch(error => {
-            console.log(error)
-        }).finally(() => {
-            setCargando(false)
-        })
-
-        // const asyncFunction = categoryId ? getProductsByCategory : getProducts
-
-        // asyncFunction(categoryId).then(response => {
-        //     setProducts(response)
-        // }).catch(error => {
-        //     console.log(error)
-        // }).finally(() => {
-        //     setCargando(false)
-        // })
-    }, [categoryId])
+    const { data : products, error, cargando } = useAsync(getProductsWithCategory, [categoryId])
 
     if (cargando) {
         return (
@@ -55,8 +22,17 @@ const ItemListContainer = () => {
         )
     }
 
+    if (error) {
+        console.log(error)
+        return (
+            <div className='center'>
+                <h1> Lo sentimos, ha ocurrido un error</h1>
+            </div>
+        )
+    }
     return (
         <div>
+            {!categoryId}
             <h1 className="title mt-5">Hardfire Gamingshop</h1>
             <h2 className="title text-danger">Productos</h2>
             <ItemList products={products} />

@@ -1,16 +1,16 @@
 import './ItemDetail.css'
 import { CartContext } from '../../CartContext/CartContext'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
-import '../asyncMock'
 
-
-const ItemDetail = ({ img, name, category, price, stock, description }) => {
+const ItemDetail = ({ id, img, name, category, price, stock, description }) => {
     
-    const { addItem } = useContext(CartContext);
+    const { addItem, inCart, getProductQuantity } = useContext(CartContext);
 
     const onAdd = (count) => {
         const productToAdd = {
+            id,
             name,
             category,
             price,
@@ -18,11 +18,11 @@ const ItemDetail = ({ img, name, category, price, stock, description }) => {
             count,
             stock
         }
-        
+       
         addItem(productToAdd);
     }
     
-    
+    const quantityAdded = getProductQuantity(id)
     
     
     return (
@@ -37,7 +37,9 @@ const ItemDetail = ({ img, name, category, price, stock, description }) => {
                         <p className="card-text">Precio: ${price}</p>
                         <p className="card-text">Stock: {stock}</p>
 
-                        < ItemCount onAdd={onAdd} stock={stock} />
+                        {stock !==0 ? < ItemCount onAdd={onAdd} stock={stock} initial={quantityAdded} category={category} />
+                        :<h3> PRODUCTO FUERA DE STOCK </h3>}
+                        {inCart(id) && <Link to= '/Cart'> FINALIZAR COMPRA </Link> }
                     </div>
                 </div>
             </div>
