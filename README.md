@@ -7,13 +7,13 @@ Hardfire es un e-commerce de productos para Gaming.
 
 Se utilizaron las siguientes Tecnologías:
 
-HTML
-CSS
-Boostrap
-JavaScript
-Firebase
-React Js
-GIT
+- HTML
+- CSS
+- Boostrap
+- JavaScript
+- Firebase
+- React Js
+- GIT
 
 ## Pasos para inicializar la APP
 
@@ -24,21 +24,21 @@ GIT
 
 ## Dependencias (package.json)
 
-"@testing-library/jest-dom": "^5.16.5",
-"@testing-library/react": "^13.4.0",
-"@testing-library/user-event": "^13.5.0",
-"@uiball/loaders": "^1.2.6",
-"bootstrap": "^5.2.1",
-"firebase": "^9.13.0",
-"react": "^18.2.0",
-"react-bootstrap": "^2.5.0",
-"react-dom": "^18.2.0",
-"react-router-dom": "^6.4.2",
-"react-scripts": "5.0.1",
-"sweetalert": "^2.1.2",
-"sweetalert2": "^11.6.6",
-"sweetalert2-react-content": "^5.0.7",
-"web-vitals": "^2.1.4"
+- "@testing-library/jest-dom": "^5.16.5",
+- "@testing-library/react": "^13.4.0",
+- "@testing-library/user-event": "^13.5.0",
+- "@uiball/loaders": "^1.2.6",
+- "bootstrap": "^5.2.1",
+- "firebase": "^9.13.0",
+- "react": "^18.2.0",
+- "react-bootstrap": "^2.5.0",
+- "react-dom": "^18.2.0",
+- "react-router-dom": "^6.4.2",
+- "react-scripts": "5.0.1",
+- "sweetalert": "^2.1.2",
+- "sweetalert2": "^11.6.6",
+- "sweetalert2-react-content": "^5.0.7",
+- "web-vitals": "^2.1.4"
 
 ## Versionado
 
