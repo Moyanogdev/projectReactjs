@@ -1,14 +1,19 @@
+.navbar{
+    align-items: center;
+    background-color: rgb(102, 102, 102);
+}
+
 .nav-item{
     justify-content: center;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
     margin-inline: 10px;
-    background-color: #D90102;
     color: black;
     padding: 7px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 26px;
     cursor: pointer;
-    border-radius: 25px;
-    transition: .4s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 .nav-item:hover{
@@ -16,8 +21,8 @@
 }
 
 .logoNav{
-    width: 250px;
-    height: 250px;
+    width: 210px;
+    height: 210px;
     position: absolute;
     top: 0%;
     left: 10%;

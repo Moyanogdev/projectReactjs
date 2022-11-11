@@ -102,9 +102,9 @@ const Checkout = () => {
     }
 
     return (
-        <div>
+        <div className="container-lg">
             {}
-            <button className="volver" onClick={() => navigate(-1)} >Volver</button>
+            <button className="mt-5 btnBack" onClick={() => navigate(-1)} >Volver</button>
             <FormularioCliente completoDatos={completoDatos} />
             {personalData
                 ? <button onClick={createOrder}>Generar Pedido</button>

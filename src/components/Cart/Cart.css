@@ -1,9 +1,63 @@
-.orden{
+h1{
+    font-family: 'Anton', sans-serif;
+}
+
+button{
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Bebas Neue', cursive;
+    border-radius: 25px;
     text-decoration: none;
-    color: black;
     transition: .4s ease-in-out;
 }
 
-.orden:hover{
+button:hover{
+    color: #D90102;
+}
+
+.ordenLink{
+    background-color: black;
     color: white;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Bebas Neue', cursive;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+.ordenLink:hover{
+    color: #D90102;
+}
+
+.backLink{
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Bebas Neue', cursive;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+.backLink:hover{
+    color: #D90102;
+}
+
+.productsCart{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyCart h3{
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 600;
 }

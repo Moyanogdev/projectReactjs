@@ -39,7 +39,7 @@ const ItemDetail = ({ id, img, name, category, price, stock, description }) => {
 
                         {stock !==0 ? < ItemCount onAdd={onAdd} stock={stock} initial={quantityAdded} category={category} />
                         :<h3> PRODUCTO FUERA DE STOCK </h3>}
-                        {inCart(id) && <Link to= '/Cart'> FINALIZAR COMPRA </Link> }
+                        {inCart(id) && <Link to= '/Cart' className='linkFinalizar'> FINALIZAR COMPRA </Link> }
                     </div>
                 </div>
             </div>

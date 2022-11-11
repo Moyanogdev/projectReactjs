@@ -10,23 +10,25 @@ const Cart = () => {
 
     if (totalQuantity === 0) {
         return (
-            <div className="center">
-                <h3> El carrito se encuentra vacío </h3>
-                <button className="atras"><Link to='/' className="orden"> Ver productos </Link></button>
+            <div className="container-lg emptyCart justify-content-center py-5 text-center">
+                <h3 className="text-center"> El carrito se encuentra vacío </h3>
+                <button className="mt-5"><Link to='/' className="backLink"> Ver productos </Link></button>
             </div>
         )
     }
     return (
-        <div className="container mb-5">
-            <h1>CARRITO</h1>
-            {cart.map(products => (
-                    <ItemCart key={products.id} {...products} />
-                ))
-            }
-            <div className="container">
-                <button className="orden"> <Link to='/Checkout' className="orden"> Generar Orden </Link></button>
+        <div className="container-lg py-5">
+            <h1 className="py-5 text-center">DETALLE DE COMPRA</h1>
+            <div className='productsCart'>
+                {cart.map(products => (
+                        <ItemCart key={products.id} {...products} />
+                    ))
+                }
+            </div>
+            <div className="container text-center">
+                <button> <Link to='/Checkout' className="ordenLink"> Generar Orden </Link></button>
                 <p> Precio total: $ {total}</p>
-                <button className="generator3" onClick={() => clearCart(Cart)}>Vaciar el carrito</button>
+                <button className="mx-2" onClick={() => clearCart(Cart)}>Vaciar el carrito</button>
                 <button onClick={() => navigate(-1)} >Volver</button>
             </div>
         </div>

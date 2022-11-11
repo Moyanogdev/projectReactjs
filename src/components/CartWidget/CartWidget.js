@@ -6,14 +6,9 @@ import { Link } from 'react-router-dom'
 
 const CartWidget = () => {
 
-    const { quantityTotal } = useContext (CartContext);
     return (
-        <div className='cartStyle'>
+        <div className='cartStyle text-center'>
             <Link to='/Cart'><img className= 'cartImg' src={cart} alt='cart'/></Link>
-            <div className='cartMargin'>
-                <h4> Agregado: { quantityTotal }</h4>
-                <h4> Total: {quantityTotal}</h4>
-            </div>
         </div>
     )
 }

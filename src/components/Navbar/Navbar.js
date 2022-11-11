@@ -25,9 +25,9 @@ const NavBar = () => {
     }, [])
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg">
             <Link to='/'>
-                <img src={logo} className="logoNav" alt='logo' /> 
+                <img src={logo} className="logoNav py-1" alt='logo' /> 
             </Link>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

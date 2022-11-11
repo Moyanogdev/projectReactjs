@@ -25,7 +25,7 @@ const ItemCount = ({ stock = 10, initial = 1, onAdd }) => {
             <button className="text-white bg-dark" onClick={decrement}>-</button>
             <button className="text-white bg-dark" onClick={increment}>+</button>
 
-            <button className="text-white bg-dark mx-5" onClick={() =>{ onAdd(count); setButtonText("Elemento agregado") }}>{buttonText}</button>
+            <button className="text-white bg-dark mx-5 mb-3" onClick={() =>{ onAdd(count); setButtonText("Elemento agregado") }}>{buttonText}</button>
         </div >
     )
 }
