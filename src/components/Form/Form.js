@@ -27,7 +27,7 @@ const FormularioCliente = ({ completoDatos }) => {
         e.preventDefault();
         if (!name || !email || !phone || !address) {
              Swal.fire({
-                 title: "Complete sus datos porfavor",
+                 title: "Complete el formulario con sus datos porfavor",
                  icon: "warning",
                  buttons: true,
                  dangerMode: true,
@@ -36,8 +36,8 @@ const FormularioCliente = ({ completoDatos }) => {
         }
         else if (email !== checkEmail && email && checkEmail) {
              Swal.fire({
-                 title: "No hay coincidencia",
-                 html: "Intente nuevamente",
+                 title: "El email no coincide",
+                 html: "Los datos deben coincidir",
                  buttons: true,
                  dangerMode: true,
              })
@@ -45,7 +45,8 @@ const FormularioCliente = ({ completoDatos }) => {
 
         else {
              Swal.fire({
-                 title: "Datos Enviados",
+                 title: "Datos Enviados Correctamente",
+                 html: "Gracias por elegirnos!",
                  icon: "success",
                  buttons: true,
              })

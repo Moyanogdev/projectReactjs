@@ -6,9 +6,8 @@
 }
 
 .img {
-    width: 150px !important;
+    width: 150px;
     height: 150px;
-    display: flex;
     align-items: center;
     align-self: center;
 }

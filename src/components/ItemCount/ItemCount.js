@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useState } from "react";
+import Toastify from 'toastify-js';
+import "toastify-js/src/toastify.css";
 
 const ItemCount = ({ stock = 10, initial = 1, onAdd }) => {
 
@@ -16,7 +18,20 @@ const ItemCount = ({ stock = 10, initial = 1, onAdd }) => {
         }
     }
 
-    const [buttonText, setButtonText] = useState("Agregar Producto al Carrito");
+    const mensajeToast = () => {
+        Toastify({
+            text: "Producto agregado al carrito",
+            duration: 3000,
+            gravity: "top",
+            position: "right",
+            style:{
+                background:"green",
+                fontSize:"15px"
+            },
+        }).showToast();
+    }
+
+    const [buttonText, setButtonText] = useState("Agrega producto al carrito");
     
     return (
         <div>
@@ -25,7 +40,7 @@ const ItemCount = ({ stock = 10, initial = 1, onAdd }) => {
             <button className="text-white bg-dark" onClick={decrement}>-</button>
             <button className="text-white bg-dark" onClick={increment}>+</button>
 
-            <button className="text-white bg-dark mx-5 mb-3" onClick={() =>{ onAdd(count); setButtonText("Elemento agregado") }}>{buttonText}</button>
+            <button className="text-white bg-dark mx-5 mb-3" onClick={ () =>{ onAdd(count); setButtonText("Producto agregado"); mensajeToast()}}>{buttonText}</button>
         </div >
     )
 }

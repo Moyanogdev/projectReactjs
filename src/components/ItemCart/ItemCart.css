@@ -2,3 +2,8 @@
     background-color: white;
     border-radius: 35px;
 }
+
+.img{
+    align-items: center;
+    align-self: center; 
+}

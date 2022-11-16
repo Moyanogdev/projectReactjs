@@ -31,6 +31,7 @@ const ItemListContainer = () => {
         )
     }
     return (
+        
         <div className='container-lg'>
             <div className='row justify-content-center text-center'>
                 {!categoryId}

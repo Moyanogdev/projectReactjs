@@ -1,13 +1,17 @@
 import './ItemDetail.css'
 import { CartContext } from '../../CartContext/CartContext'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import CartWidget from '../CartWidget/CartWidget'
+import * as ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom'
 
 const ItemDetail = ({ id, img, name, category, price, stock, description }) => {
     
-    const { addItem, inCart, getProductQuantity } = useContext(CartContext);
-
+    const { addItem, inCart, getProductQuantity} = useContext(CartContext);  
+   
+    
     const onAdd = (count) => {
         const productToAdd = {
             id,
@@ -16,10 +20,10 @@ const ItemDetail = ({ id, img, name, category, price, stock, description }) => {
             price,
             description,
             count,
-            stock
-        }
-       
-        addItem(productToAdd);
+            stock, 
+            img
+        }        
+        addItem(productToAdd);           
     }
     
     const quantityAdded = getProductQuantity(id)

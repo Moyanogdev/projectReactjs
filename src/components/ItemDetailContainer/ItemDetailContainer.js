@@ -10,6 +10,7 @@ const ItemDetailContainer = () => {
     
     const { productId } = useParams()
     const productsAdapterFirestore = () => getProductById(productId)
+    
 
     const {data:products, error, cargando} = useAsync(productsAdapterFirestore, [productId])
     const navigate = useNavigate()
@@ -30,8 +31,9 @@ const ItemDetailContainer = () => {
             </div>
         )
     }
-
+    console.log(products);
     return (
+        
         <div className='container-lg'>
             <h1 className= "center py-5">Detalle de producto</h1>
             <ItemDetail key={products.id} {...products} />

@@ -1,19 +1,19 @@
 .navbar{
     align-items: center;
-    background-color: rgb(102, 102, 102);
+    background-color: rgb(95, 95, 95);
 }
 
 .nav-item{
     justify-content: center;
     text-decoration: none;
-    font-family: 'Bebas Neue', cursive;
-    margin-inline: 10px;
+    font-family: 'Exo 2', sans-serif;
+    margin-inline: 12px;
     color: black;
     padding: 7px;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 20px;
     cursor: pointer;
-    transition: .5s ease-in-out;
+    transition: .5s ease-in;
 }
 
 .nav-item:hover{

@@ -43,7 +43,7 @@ const NavBar = () => {
                     }
                 </div>
             </div>
-            <CartWidget />   
+            <CartWidget/>   
         </nav >
     )
 }
