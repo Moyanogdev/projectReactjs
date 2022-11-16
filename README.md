@@ -24,7 +24,7 @@ Se utilizaron las siguientes Tecnologías:
 
 ## Gif de funcionamiento de la APP
 
-- https://loom.com/share/e5b486ae36b44fd0ae134c879f23c624
+- https://www.loom.com/share/afbca16ffb584b8d851d42f5f543e228
 
 ## Dependencias (package.json)
 
