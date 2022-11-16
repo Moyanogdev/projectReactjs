@@ -1,4 +1,4 @@
-button{
+.btnBack{
     background-color: black;
     color: white;
     font-weight: 600;
@@ -9,15 +9,6 @@ button{
     transition: .4s ease-in-out;
 }
 
-button:hover{
+.btnBack:hover{
     color: #D90102;
-}
-
-.card{
-    border-radius: 25px;
-    transition: .4s ease-in-out;
-}
-
-.card:hover{
-    transform: scale(1.1, 1.1);
 }

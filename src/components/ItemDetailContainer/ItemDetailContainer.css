@@ -5,17 +5,7 @@
   flex-direction: column;
 }
 
-.atras{
-  background-color: #D90102;
-  color: black;
-  padding: 7px;
-  font-weight: 600;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 25px;
-  transition: .4s ease-in-out;
-}
-
-.atras:hover{
-  color: white;
+.cargando{
+  font-family: 'Anton', sans-serif;
+  margin-top: 100px;
 }

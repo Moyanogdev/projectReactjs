@@ -22,9 +22,9 @@ export const CartProvider = ({children}) => {
         setTotal(total)
     }, [cart])
 
-
   const addItem = (productToAdd) => {    
     
+    console.log(productToAdd);
     if(!inCart(productToAdd.id)) {
         setCart([...cart, productToAdd])
     } else {

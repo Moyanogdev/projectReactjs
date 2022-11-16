@@ -27,7 +27,7 @@ const FormularioCliente = ({ completoDatos }) => {
         e.preventDefault();
         if (!name || !email || !phone || !address) {
              Swal.fire({
-                 title: "Complete sus datos porfavor",
+                 title: "Complete el formulario con sus datos porfavor",
                  icon: "warning",
                  buttons: true,
                  dangerMode: true,
@@ -36,8 +36,8 @@ const FormularioCliente = ({ completoDatos }) => {
         }
         else if (email !== checkEmail && email && checkEmail) {
              Swal.fire({
-                 title: "No hay coincidencia",
-                 html: "Intente nuevamente",
+                 title: "El email no coincide",
+                 html: "Los datos deben coincidir",
                  buttons: true,
                  dangerMode: true,
              })
@@ -45,7 +45,8 @@ const FormularioCliente = ({ completoDatos }) => {
 
         else {
              Swal.fire({
-                 title: "Datos Enviados",
+                 title: "Datos Enviados Correctamente",
+                 html: "Gracias por elegirnos!",
                  icon: "success",
                  buttons: true,
              })
@@ -59,11 +60,9 @@ const FormularioCliente = ({ completoDatos }) => {
     }
 
 
-
-
     return (
-        <div className='container'>
-            <div className="tittle">
+        <div className='container-lg py-5'>
+            <div className="tittle py-5">
                 <h1>Complete sus datos para finalizar con la compra</h1>
             </div>
             <div className="row">
@@ -93,7 +92,7 @@ const FormularioCliente = ({ completoDatos }) => {
                         <textarea className="formInput" name="comments" rows="6" placeholder="Comentario" required></textarea>
                     </div>
                     <div className="text-center">
-                        <button className="text-center" onClick={submit}>TERMINAR ORDEN DE COMPRA</button>
+                        <button className="text-center mt-5" onClick={submit}>TERMINAR ORDEN DE COMPRA</button>
                     </div>
                 </form>
             </div>

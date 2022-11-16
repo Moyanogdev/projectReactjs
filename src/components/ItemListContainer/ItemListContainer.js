@@ -15,8 +15,8 @@ const ItemListContainer = () => {
 
     if (cargando) {
         return (
-            <div className='center'>
-                <h1 className="mt-5">Loading...</h1>
+            <div className='center py-5 mb-5'>
+                <h1 className="cargando">LOADING...</h1>
                 <Ring size={50} speed={2} color="black" className="center" />
             </div>
         )
@@ -31,11 +31,14 @@ const ItemListContainer = () => {
         )
     }
     return (
-        <div>
-            {!categoryId}
-            <h1 className="title mt-5">Hardfire Gamingshop</h1>
-            <h2 className="title text-danger">Productos</h2>
-            <ItemList products={products} />
+        
+        <div className='container-lg'>
+            <div className='row justify-content-center text-center'>
+                {!categoryId}
+                <h1 className="title mt-5">HARDFIRE GAMINGSHOP</h1>
+                <h2 className="title text-danger">Productos</h2>
+                <ItemList products={products} />
+            </div>
         </div>
     )
 }

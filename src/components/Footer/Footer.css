@@ -1,0 +1,27 @@
+.containerFooter{
+    text-align: center;
+    color: white;
+    justify-content: center;
+    font-weight: 600;
+    font-family: 'Bebas Neue', cursive;
+    background-color: black;
+}
+
+.footer{
+    font-size: 22px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #d83b3b;
+    transition: .4s ease-in-out;
+}
+
+.footer a:hover{
+    color: #D90102;
+}
+
+.logoFooter{
+    width: 200px;
+    height: 200px;
+}

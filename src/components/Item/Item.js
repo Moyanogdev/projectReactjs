@@ -5,7 +5,7 @@ const Item = ({ img, name, category, id, price }) => {
     const navigate = useNavigate()
 
     return (
-        <div className="col">
+        <div>
             <div className="card h-100">
                 <img className="img" src={img} alt={name} />
                 <div className="card-body text-center">
