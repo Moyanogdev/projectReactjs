@@ -1,12 +1,12 @@
 # HARDFIRE GAMINGSHOP | Proyecto [ReactJs] Ecommerce. Coderhouse
 
+Proyecto Final del curso React Js. de Coderhouse.
 Tienda online con carrito de compras, utilizando componentes de React Js, cuyo objetivo es poder filtrar los productos, crear orden de compras y realizar la compra con un formulario final.
 Hardfire es un e-commerce de productos para Gaming.
 
-## Tecnologías
+## Construido con 
 
 Se utilizaron las siguientes Tecnologías:
-
 - HTML
 - CSS
 - Boostrap
@@ -24,6 +24,8 @@ Se utilizaron las siguientes Tecnologías:
 
 ## Gif de funcionamiento de la APP
 
+En el siguiente video se demuestra, de manera visual, el funcionamiento de la aplicación. 
+
 - https://www.loom.com/share/afbca16ffb584b8d851d42f5f543e228
 
 ## Dependencias (package.json)
@@ -37,16 +39,18 @@ Se utilizaron las siguientes Tecnologías:
 - "react": "^18.2.0",
 - "react-bootstrap": "^2.5.0",
 - "react-dom": "^18.2.0",
+- "react-hook-form": "^7.39.1",
 - "react-router-dom": "^6.4.2",
 - "react-scripts": "5.0.1",
 - "sweetalert": "^2.1.2",
 - "sweetalert2": "^11.6.6",
 - "sweetalert2-react-content": "^5.0.7",
+- "toastify-js": "^1.12.0",
 - "web-vitals": "^2.1.4"
 
 ## Versionado
 
-Se utilizó _Git_ para el sistema de versionado. Para seguir sus actualizaciones, se usó y usará [GitHub].
+Se utilizó GIT para el sistema de versionado. Se utiliza GitHub para seguir sus actualizaciones. https://github.com/Moyanogdev/proyectReact.
 
 ### App desarrollada por Moyano Gonzalo
 
